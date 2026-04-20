@@ -8,10 +8,11 @@
       content="Asurops Technologies — Remote QA and application support for SaaS teams. Manual testing, regression, UAT, release validation, and L1 application support."
     />
     <title>Asurops Technologies — Remote QA &amp; Application Support</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Outfit:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
@@ -20,11 +21,12 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
+    <!-- ====================================================== HEADER -->
     <header class="site-header">
       <div class="container header-inner">
         <a class="logo" href="#" aria-label="Asurops Technologies — Home">
           <span class="logo-mark">
-            <img src="assets/logo.png" width="44" height="44" alt="" decoding="async" />
+            <img src="assets/logo.png" width="38" height="38" alt="" decoding="async" />
           </span>
           <span class="logo-text">Asu<span class="logo-accent">rops</span></span>
         </a>
@@ -34,472 +36,622 @@
         </label>
         <nav class="site-nav" aria-label="Primary">
           <ul>
-            <li><a href="#services">Services</a></li>
+            <li><a href="#offerings">Solutions &amp; Services</a></li>
             <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#why-asurops">Why Asurops</a></li>
-            <li><a href="#contact" class="nav-cta">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact" class="nav-cta">Contact Us</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main id="main">
-      <!-- LP hero: headline + bullets + lead form (reference-style) -->
-      <section class="lp-hero">
-        <div class="container lp-hero-grid">
-          <div class="lp-hero-copy">
-            <p class="hero-brand">Asurops Technologies</p>
-            <h1>Ship Releases With Confidence—Remote QA &amp; Application Support Built for SaaS Teams</h1>
-            <p class="lede lp-lede">
-              Stop losing nights to preventable defects and noisy production fire drills. We strengthen release
-              quality with structured manual QA and keep users productive with disciplined L1 application support—so
-              your engineers can focus on building, not chasing break-fix chaos.
+      <!-- ====================================================== HERO -->
+      <section class="wk-hero">
+        <div class="container wk-hero-inner">
+          <div class="wk-hero-copy">
+            <p class="eyebrow">Remote QA &amp; Application Support</p>
+            <h1>
+              Trusted <span class="accent">QA &amp; support</span><br />
+              for software teams
+            </h1>
+            <p class="wk-hero-lede">
+              Asurops Technologies helps SaaS and product companies improve release quality, reduce defects,
+              and keep applications running smoothly through reliable remote QA testing and L1 application
+              support delivered with discipline.
             </p>
-            <ul class="lp-hero-bullets">
-              <li>Structured test execution &amp; release validation—not ad-hoc clicking</li>
-              <li>Clear defects with reproduction steps your developers can act on fast</li>
-              <li>Ticket triage, incidents, and user support aligned to your stack</li>
-              <li>Flexible offshore engagement—monthly retainers or scoped projects</li>
+            <ul class="wk-hero-ctas">
+              <li><a href="#offerings"><span>Discover Solutions &amp; Services</span><span class="arrow" aria-hidden="true">&rarr;</span></a></li>
+              <li><a href="#pricing"><span>Explore Plans &amp; Pricing</span><span class="arrow" aria-hidden="true">&rarr;</span></a></li>
+              <li><a href="#about"><span>Learn More About Asurops</span><span class="arrow" aria-hidden="true">&rarr;</span></a></li>
             </ul>
+            <a class="wk-hero-scroll" href="#trust">
+              <span>Scroll Down</span>
+              <span class="arrow" aria-hidden="true">&darr;</span>
+            </a>
           </div>
-          <aside class="lp-lead-card" aria-labelledby="lead-card-title">
-            <h2 id="lead-card-title" class="lp-lead-title">Discuss your requirements</h2>
-            <p class="lp-lead-sub">Get a quick, practical view of how we can support QA and support operations.</p>
-            <form class="lp-form" id="lead-form" novalidate>
-              <label class="lp-field">
-                <span>Full name <abbr title="required">*</abbr></span>
-                <input type="text" name="name" required autocomplete="name" placeholder="Your name" />
-              </label>
-              <label class="lp-field">
-                <span>Business email <abbr title="required">*</abbr></span>
-                <input type="email" name="email" required autocomplete="email" placeholder="you@company.com" />
-              </label>
-              <label class="lp-field">
-                <span>Phone</span>
-                <input type="tel" name="phone" autocomplete="tel" placeholder="+1 …" />
-              </label>
-              <label class="lp-field">
-                <span>Company / product <abbr title="required">*</abbr></span>
-                <input type="text" name="company" required autocomplete="organization" placeholder="Organization" />
-              </label>
-              <p class="lp-consent">
-                By submitting, you agree we may contact you about Asurops services. Update the mailto address in the
-                page script when you go live.
-              </p>
-              <button type="submit" class="btn btn-primary lp-submit">Request a conversation</button>
-            </form>
-          </aside>
-        </div>
-        <div class="container lp-hero-visual">
-          <div class="lp-visual-grid">
-            <figure class="lp-visual">
-              <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80"
-                alt=""
-                width="400"
-                height="260"
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
-            <figure class="lp-visual">
-              <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80"
-                alt=""
-                width="400"
-                height="260"
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
-            <figure class="lp-visual">
-              <img
-                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80"
-                alt=""
-                width="400"
-                height="260"
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
+          <div class="wk-hero-visual">
+            <img
+              src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1100&q=80"
+              alt="A QA professional reviewing test results on a laptop"
+              width="900"
+              height="675"
+              loading="eager"
+              decoding="async"
+            />
           </div>
         </div>
       </section>
 
-      <section class="lp-trust section-alt" aria-label="Trust indicators">
+      <!-- ====================================================== TRUST -->
+      <section id="trust" class="wk-trust">
+        <div class="container wk-trust-inner">
+          <p class="wk-trust-label">Built for teams that ship software</p>
+          <div class="wk-trust-row">
+            <span class="wk-trust-pill">SaaS &amp; cloud products</span>
+            <span class="wk-trust-pill">B2B software</span>
+            <span class="wk-trust-pill">Startups &amp; scale-ups</span>
+            <span class="wk-trust-pill">Product &amp; engineering orgs</span>
+            <span class="wk-trust-pill">Delivery agencies</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================== OFFERINGS (TABS) -->
+      <section id="offerings" class="section">
         <div class="container">
-          <p class="lp-trust-label">Built for teams that ship software</p>
-          <div class="lp-trust-row">
-            <span class="lp-trust-pill">SaaS &amp; B2B products</span>
-            <span class="lp-trust-pill">Startups &amp; scale-ups</span>
-            <span class="lp-trust-pill">Product &amp; engineering orgs</span>
-            <span class="lp-trust-pill">Agencies &amp; delivery partners</span>
+          <div role="tablist" aria-label="Our offerings" class="wk-tabs">
+            <button class="wk-tab" role="tab" aria-selected="true" aria-controls="panel-overview" id="tab-overview" data-tab="overview">Overview</button>
+            <button class="wk-tab" role="tab" aria-selected="false" aria-controls="panel-qa" id="tab-qa" data-tab="qa">QA Services</button>
+            <button class="wk-tab" role="tab" aria-selected="false" aria-controls="panel-support" id="tab-support" data-tab="support">Application Support</button>
+            <button class="wk-tab" role="tab" aria-selected="false" aria-controls="panel-combined" id="tab-combined" data-tab="combined">QA + Support</button>
+          </div>
+
+          <!-- Panel: Overview -->
+          <div class="wk-tab-panel is-active" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview">
+            <div class="wk-tab-intro">
+              <div>
+                <p class="eyebrow">Our offerings</p>
+                <h2>Quality and support, delivered with discipline</h2>
+                <p>
+                  We pair structured manual QA with disciplined L1 application support so software teams can ship
+                  confidently and keep users productive. Engagements are flexible — from scoped projects to ongoing
+                  monthly retainers, on your tools and cadence.
+                </p>
+              </div>
+              <a class="arrow-link" href="#pricing">Explore plans <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            </div>
+
+            <div class="wk-card-grid">
+              <article class="wk-card">
+                <div class="wk-card-media">
+                  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" />
+                </div>
+                <div class="wk-card-body">
+                  <p class="wk-card-label">Service &amp; Solution</p>
+                  <h3 class="wk-card-title">Manual functional &amp; regression QA</h3>
+                  <p class="wk-card-text">Structured test cases and exploratory passes aligned to acceptance criteria, with regression packs that grow with your product.</p>
+                  <a class="arrow-link wk-card-cta" href="#tab-qa">Explore QA services <span class="arrow" aria-hidden="true">&rarr;</span></a>
+                </div>
+              </article>
+
+              <article class="wk-card">
+                <div class="wk-card-media">
+                  <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" />
+                </div>
+                <div class="wk-card-body">
+                  <p class="wk-card-label">Service &amp; Solution</p>
+                  <h3 class="wk-card-title">UAT &amp; release validation</h3>
+                  <p class="wk-card-text">Coordination, sign-off support, and go / no-go signals stakeholders can trust before every release.</p>
+                  <a class="arrow-link wk-card-cta" href="#tab-qa">Explore release validation <span class="arrow" aria-hidden="true">&rarr;</span></a>
+                </div>
+              </article>
+
+              <article class="wk-card">
+                <div class="wk-card-media">
+                  <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" />
+                </div>
+                <div class="wk-card-body">
+                  <p class="wk-card-label">Service &amp; Solution</p>
+                  <h3 class="wk-card-title">L1 application support</h3>
+                  <p class="wk-card-text">Ticket intake, triage, and routing with full context so users stay unblocked and engineers stay focused.</p>
+                  <a class="arrow-link wk-card-cta" href="#tab-support">Explore support services <span class="arrow" aria-hidden="true">&rarr;</span></a>
+                </div>
+              </article>
+
+              <article class="wk-card">
+                <div class="wk-card-media">
+                  <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" />
+                </div>
+                <div class="wk-card-body">
+                  <p class="wk-card-label">Featured Insight</p>
+                  <h3 class="wk-card-title">Built for SaaS delivery cadence</h3>
+                  <p class="wk-card-text">Engagement models that fit two-week releases, sprint cycles, and on-call user windows — with clear ownership.</p>
+                  <a class="arrow-link wk-card-cta" href="#why">Read more <span class="arrow" aria-hidden="true">&rarr;</span></a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Panel: QA Services -->
+          <div class="wk-tab-panel" id="panel-qa" role="tabpanel" aria-labelledby="tab-qa" hidden>
+            <div class="wk-tab-intro">
+              <div>
+                <p class="eyebrow">QA Services</p>
+                <h2>Confidence in every release</h2>
+                <p>Improve release quality with structured manual testing, regression coverage, and clear defect reporting your developers can act on quickly.</p>
+              </div>
+              <a class="arrow-link" href="#pricing">View QA pricing <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            </div>
+            <div class="wk-card-grid">
+              <article class="wk-card">
+                <div class="wk-card-media"><img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></div>
+                <div class="wk-card-body">
+                  <p class="wk-card-label">Service &amp; Solution</p>
+                  <h3 class="wk-card-title">Functional &amp; regression testing</h3>
+                  <p class="wk-card-text">Test cases tied to acceptance criteria, regression packs that grow with the product, and clear bug reports.</p>
+                  <a class="arrow-link wk-card-cta" href="#contact">Discuss your scope <span class="arrow" aria-hidden="true">&rarr;</span></a>
+                </div>
+              </article>
+              <article class="wk-card">
+                <div class="wk-card-media"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></div>
+                <div class="wk-card-body">
+                  <p class="wk-card-label">Service &amp; Solution</p>
+                  <h3 class="wk-card-title">UAT &amp; release validation</h3>
+                  <p class="wk-card-text">UAT coordination, release readiness checks, and sign-off support — go / no-go signals leadership can trust.</p>
+                  <a class="arrow-link wk-card-cta" href="#contact">Discuss release scope <span class="arrow" aria-hidden="true">&rarr;</span></a>
+                </div>
+              </article>
+              <article class="wk-card">
+                <div class="wk-card-media"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></div>
+                <div class="wk-card-body">
+                  <p class="wk-card-label">Service &amp; Solution</p>
+                  <h3 class="wk-card-title">Dedicated QA capacity</h3>
+                  <p class="wk-card-text">Part-time or ongoing hours for sprint cadence, working in your Jira, Linear, TestRail, or BrowserStack stack.</p>
+                  <a class="arrow-link wk-card-cta" href="#contact">Plan capacity <span class="arrow" aria-hidden="true">&rarr;</span></a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Panel: Support -->
+          <div class="wk-tab-panel" id="panel-support" role="tabpanel" aria-labelledby="tab-support" hidden>
+            <div class="wk-tab-intro">
+              <div>
+                <p class="eyebrow">Application Support</p>
+                <h2>Keep users productive every day</h2>
+                <p>Disciplined L1 support and incident handling so users stay unblocked and your engineers stay focused on the roadmap.</p>
+              </div>
+              <a class="arrow-link" href="#pricing">View support pricing <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            </div>
+            <div class="wk-card-grid">
+              <article class="wk-card">
+                <div class="wk-card-media"><img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></div>
+                <div class="wk-card-body">
+                  <p class="wk-card-label">Service &amp; Solution</p>
+                  <h3 class="wk-card-title">L1 ticket handling</h3>
+                  <p class="wk-card-text">Ticket intake, triage, routing, and user guidance for known issues — across email, chat, and your help desk.</p>
+                  <a class="arrow-link wk-card-cta" href="#contact">Talk about support <span class="arrow" aria-hidden="true">&rarr;</span></a>
+                </div>
+              </article>
+              <article class="wk-card">
+                <div class="wk-card-media"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></div>
+                <div class="wk-card-body">
+                  <p class="wk-card-label">Service &amp; Solution</p>
+                  <h3 class="wk-card-title">Incident &amp; production support</h3>
+                  <p class="wk-card-text">Severity-based incident handling, communication bridges for live issues, and post-incident notes that feed QA.</p>
+                  <a class="arrow-link wk-card-cta" href="#contact">Discuss incident model <span class="arrow" aria-hidden="true">&rarr;</span></a>
+                </div>
+              </article>
+              <article class="wk-card">
+                <div class="wk-card-media"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></div>
+                <div class="wk-card-body">
+                  <p class="wk-card-label">Service &amp; Solution</p>
+                  <h3 class="wk-card-title">User support &amp; coordination</h3>
+                  <p class="wk-card-text">Friendly user communication during business hours, with clear handoffs to your engineering and product teams.</p>
+                  <a class="arrow-link wk-card-cta" href="#contact">Plan coverage <span class="arrow" aria-hidden="true">&rarr;</span></a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Panel: Combined -->
+          <div class="wk-tab-panel" id="panel-combined" role="tabpanel" aria-labelledby="tab-combined" hidden>
+            <div class="wk-tab-intro">
+              <div>
+                <p class="eyebrow">QA + Application Support</p>
+                <h2>End-to-end coverage from one partner</h2>
+                <p>One team that knows your product across pre-release testing and in-life user support — for SaaS and product companies that want a single partner.</p>
+              </div>
+              <a class="arrow-link" href="#pricing">View combined plans <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            </div>
+            <div class="wk-card-grid">
+              <article class="wk-card">
+                <div class="wk-card-media"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></div>
+                <div class="wk-card-body">
+                  <p class="wk-card-label">Service &amp; Solution</p>
+                  <h3 class="wk-card-title">Pre-release QA + L1 support</h3>
+                  <p class="wk-card-text">QA cycles, release validation, and L1 ticket handling under a shared engagement and a single point of contact.</p>
+                  <a class="arrow-link wk-card-cta" href="#contact">Get a tailored quote <span class="arrow" aria-hidden="true">&rarr;</span></a>
+                </div>
+              </article>
+              <article class="wk-card">
+                <div class="wk-card-media"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></div>
+                <div class="wk-card-body">
+                  <p class="wk-card-label">Featured Outcome</p>
+                  <h3 class="wk-card-title">One product knowledge base</h3>
+                  <p class="wk-card-text">Shared product context across QA and support shortens triage time and improves user communication.</p>
+                  <a class="arrow-link wk-card-cta" href="#why">Why this works <span class="arrow" aria-hidden="true">&rarr;</span></a>
+                </div>
+              </article>
+              <article class="wk-card">
+                <div class="wk-card-media"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></div>
+                <div class="wk-card-body">
+                  <p class="wk-card-label">Featured Outcome</p>
+                  <h3 class="wk-card-title">Predictable release cadence</h3>
+                  <p class="wk-card-text">Test packs, severity playbooks, and release checks evolve cycle over cycle instead of resetting each sprint.</p>
+                  <a class="arrow-link wk-card-cta" href="#why">Read the approach <span class="arrow" aria-hidden="true">&rarr;</span></a>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="services" class="lp-services section">
-        <div class="container">
-          <header class="lp-section-head">
-            <h2>Our services to keep releases and users on track</h2>
-            <p class="section-sub">
-              Focused remote QA and application support—so you get predictable coverage across builds and production.
-            </p>
-          </header>
-          <div class="lp-service-grid">
-            <article class="lp-svc-card">
-              <div class="lp-svc-img">
-                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=480&q=80" alt="" width="480" height="220" loading="lazy" />
-              </div>
-              <h3>Manual functional &amp; regression QA</h3>
-              <ul>
-                <li>Structured test cases and exploratory passes aligned to acceptance criteria</li>
-                <li>Regression packs for frequent releases</li>
-                <li>Bug reporting with clear steps, data, and environment notes</li>
-              </ul>
-            </article>
-            <article class="lp-svc-card">
-              <div class="lp-svc-img">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=480&q=80" alt="" width="480" height="220" loading="lazy" />
-              </div>
-              <h3>UAT &amp; release validation</h3>
-              <ul>
-                <li>UAT coordination and sign-off support</li>
-                <li>Release readiness checks against agreed scope</li>
-                <li>Go / no-go signals your stakeholders can trust</li>
-              </ul>
-            </article>
-            <article class="lp-svc-card">
-              <div class="lp-svc-img">
-                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=480&q=80" alt="" width="480" height="220" loading="lazy" />
-              </div>
-              <h3>L1 application support</h3>
-              <ul>
-                <li>Ticket intake, triage, and routing with full context</li>
-                <li>User guidance for known issues and workarounds</li>
-                <li>Coordination with your engineering and ops teams</li>
-              </ul>
-            </article>
-            <article class="lp-svc-card">
-              <div class="lp-svc-img">
-                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=480&q=80" alt="" width="480" height="220" loading="lazy" />
-              </div>
-              <h3>Incident &amp; production support</h3>
-              <ul>
-                <li>Incident handling within defined severity models</li>
-                <li>Communication bridges for live issues</li>
-                <li>Post-incident notes to feed QA and backlog</li>
-              </ul>
-            </article>
-            <article class="lp-svc-card">
-              <div class="lp-svc-img">
-                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=480&q=80" alt="" width="480" height="220" loading="lazy" />
-              </div>
-              <h3>QA + support combined</h3>
-              <ul>
-                <li>One partner for pre-release testing and in-life support</li>
-                <li>Shared understanding of your product and users</li>
-                <li>End-to-end coverage for SaaS and product companies</li>
-              </ul>
-            </article>
-            <article class="lp-svc-card">
-              <div class="lp-svc-img">
-                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=480&q=80" alt="" width="480" height="220" loading="lazy" />
-              </div>
-              <h3>Dedicated QA capacity</h3>
-              <ul>
-                <li>Part-time or ongoing hours for roadmap and sprint cadence</li>
-                <li>Works with your Jira, Linear, or test tooling</li>
-                <li>Scales up for launches and major migrations</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="lp-benefits section section-alt">
-        <div class="container">
-          <header class="lp-section-head">
-            <h2>Business benefits over time</h2>
-            <p class="section-sub">Practical gains teams see when QA and support are run with discipline.</p>
-          </header>
-          <div class="lp-benefit-grid">
-            <article class="lp-benefit">
-              <h3>Fewer escaped defects</h3>
-              <p>Catch issues before customers do—with structured coverage and clear release criteria.</p>
-            </article>
-            <article class="lp-benefit">
-              <h3>Less engineering thrash</h3>
-              <p>Developers spend less time reproducing vague tickets and more time shipping fixes.</p>
-            </article>
-            <article class="lp-benefit">
-              <h3>Predictable support load</h3>
-              <p>Users get consistent responses; severity and ownership are explicit.</p>
-            </article>
-            <article class="lp-benefit">
-              <h3>Faster onboarding for releases</h3>
-              <p>Test packs and checklists evolve with your product instead of resetting every cycle.</p>
-            </article>
-            <article class="lp-benefit">
-              <h3>Cost-effective scale</h3>
-              <p>Add specialist QA and support capacity without full-time hires for every role.</p>
-            </article>
-            <article class="lp-benefit">
-              <h3>Clear accountability</h3>
-              <p>Evidence, tickets, and test artifacts stay traceable for audits and retros.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
+      <!-- ====================================================== PRICING -->
       <section id="pricing" class="section section-alt">
         <div class="container">
-          <header class="section-head section-head--wide">
-            <p class="section-label section-label--yellow">Pricing</p>
+          <header class="section-head">
+            <p class="eyebrow">Pricing</p>
             <h2>Plans &amp; starting points</h2>
-            <p class="section-sub">Monthly figures are starting points; scope is tailored after consultation.</p>
+            <p class="section-sub">Monthly figures are starting points; final scope is tailored after a short consultation.</p>
           </header>
-          <!-- Grid order: row 1 = Starter (QA | Support | Bundle), row 2 = Growth (QA | Support | Bundle) -->
-          <div class="pricing-grid">
-            <article class="price-card">
-              <p class="price-card-category">QA Services</p>
-              <h4 class="price-card-title">Starter QA Plan</h4>
-              <p class="price-amount">From <strong>$750</strong>/month</p>
-              <ul class="price-list">
+
+          <div class="wk-pricing-grid">
+            <article class="wk-price-card">
+              <p class="wk-price-cat">QA Services</p>
+              <h3 class="wk-price-title">Starter QA Plan</h3>
+              <p class="wk-price-amount">From <strong>$750</strong>/month</p>
+              <ul class="wk-price-list">
                 <li>Up to 20 hours QA support</li>
                 <li>Basic functional testing</li>
                 <li>Bug reporting</li>
               </ul>
+              <a class="btn btn-outline" href="#contact">Get started</a>
             </article>
-            <article class="price-card">
-              <p class="price-card-category">Application Support</p>
-              <h4 class="price-card-title">Starter Support Plan</h4>
-              <p class="price-amount">From <strong>$750</strong>/month</p>
-              <ul class="price-list">
+
+            <article class="wk-price-card">
+              <p class="wk-price-cat">Application Support</p>
+              <h3 class="wk-price-title">Starter Support Plan</h3>
+              <p class="wk-price-amount">From <strong>$750</strong>/month</p>
+              <ul class="wk-price-list">
                 <li>Basic ticket handling</li>
                 <li>Email/chat support</li>
                 <li>Issue logging</li>
               </ul>
+              <a class="btn btn-outline" href="#contact">Get started</a>
             </article>
-            <article class="price-card">
-              <p class="price-card-category">QA + Support</p>
-              <h4 class="price-card-title">Starter Bundle</h4>
-              <p class="price-amount">From <strong>$1,200</strong>/month</p>
-              <ul class="price-list">
+
+            <article class="wk-price-card">
+              <p class="wk-price-cat">QA + Support</p>
+              <h3 class="wk-price-title">Starter Bundle</h3>
+              <p class="wk-price-amount">From <strong>$1,200</strong>/month</p>
+              <ul class="wk-price-list">
                 <li>Basic QA testing</li>
                 <li>Basic application support</li>
               </ul>
+              <a class="btn btn-outline" href="#contact">Get started</a>
             </article>
-            <article class="price-card price-card--featured">
-              <p class="price-card-category">QA Services</p>
-              <h4 class="price-card-title">Growth QA Plan</h4>
-              <p class="price-amount">From <strong>$1,500</strong>/month</p>
-              <ul class="price-list">
+
+            <article class="wk-price-card wk-price-card--featured">
+              <p class="wk-price-cat">QA Services</p>
+              <h3 class="wk-price-title">Growth QA Plan</h3>
+              <p class="wk-price-amount">From <strong>$1,500</strong>/month</p>
+              <ul class="wk-price-list">
                 <li>Full regression testing</li>
                 <li>Release validation</li>
                 <li>Expanded QA coverage</li>
               </ul>
+              <a class="btn btn-primary" href="#contact">Talk to sales</a>
             </article>
-            <article class="price-card price-card--featured">
-              <p class="price-card-category">Application Support</p>
-              <h4 class="price-card-title">Growth Support Plan</h4>
-              <p class="price-amount">From <strong>$1,500</strong>/month</p>
-              <ul class="price-list">
+
+            <article class="wk-price-card wk-price-card--featured">
+              <p class="wk-price-cat">Application Support</p>
+              <h3 class="wk-price-title">Growth Support Plan</h3>
+              <p class="wk-price-amount">From <strong>$1,500</strong>/month</p>
+              <ul class="wk-price-list">
                 <li>L1 support coverage</li>
                 <li>Ticket triage</li>
                 <li>User support handling</li>
               </ul>
+              <a class="btn btn-primary" href="#contact">Talk to sales</a>
             </article>
-            <article class="price-card price-card--featured">
-              <p class="price-card-category">QA + Support</p>
-              <h4 class="price-card-title">Growth Bundle</h4>
-              <p class="price-amount">From <strong>$2,500</strong>/month</p>
-              <ul class="price-list">
+
+            <article class="wk-price-card wk-price-card--featured">
+              <p class="wk-price-cat">QA + Support</p>
+              <h3 class="wk-price-title">Growth Bundle</h3>
+              <p class="wk-price-amount">From <strong>$2,500</strong>/month</p>
+              <ul class="wk-price-list">
                 <li>Full QA cycles</li>
                 <li>L1 application support</li>
                 <li>Release + production support</li>
               </ul>
+              <a class="btn btn-primary" href="#contact">Talk to sales</a>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="industries" class="lp-audience-tools section">
-        <div class="container">
-          <header class="lp-section-head">
-            <h2>Who we work with</h2>
-            <p class="section-sub">Teams across stages—from early SaaS to established product companies.</p>
-          </header>
-          <ul class="lp-industry-grid">
-            <li>SaaS &amp; cloud software</li>
-            <li>B2B product companies</li>
-            <li>Startups &amp; scale-ups</li>
-            <li>Software development teams</li>
-            <li>Agencies shipping for clients</li>
-            <li>Internal IT &amp; product orgs</li>
-          </ul>
-          <div class="lp-audience-tools__tools">
-            <header class="lp-section-head lp-section-head--sub">
-              <h3>Tools we work with</h3>
-              <p class="section-sub">We meet you in your stack—no forced tool migrations.</p>
-            </header>
-            <div class="lp-tool-badges">
-              <span>Jira</span>
-              <span>Linear</span>
-              <span>Azure DevOps</span>
-              <span>TestRail</span>
-              <span>Playwright</span>
-              <span>BrowserStack</span>
-              <span>Zendesk</span>
-              <span>Intercom</span>
-              <span>Slack</span>
-              <span>GitHub</span>
-              <span>Notion</span>
-              <span>Confluence</span>
+      <!-- ====================================================== INDUSTRIES + TOOLS -->
+      <section id="industries" class="section">
+        <div class="container wk-audience">
+          <div>
+            <p class="eyebrow">Who we work with</p>
+            <h2>Software teams across stages and stacks</h2>
+            <p class="sub">From early-stage SaaS to established product organisations, we plug in alongside your existing teams and tools.</p>
+            <ul class="wk-industry-list">
+              <li>SaaS &amp; cloud software</li>
+              <li>B2B product companies</li>
+              <li>Startups &amp; scale-ups</li>
+              <li>Software development teams</li>
+              <li>Delivery agencies</li>
+              <li>Internal IT &amp; product orgs</li>
+            </ul>
+          </div>
+          <div class="wk-tools" aria-label="Tools we work with">
+            <h3>Tools we work with</h3>
+            <div class="wk-tool-grid">
+              <span class="wk-tool">Jira</span>
+              <span class="wk-tool">Linear</span>
+              <span class="wk-tool">Azure DevOps</span>
+              <span class="wk-tool">TestRail</span>
+              <span class="wk-tool">Playwright</span>
+              <span class="wk-tool">BrowserStack</span>
+              <span class="wk-tool">Zendesk</span>
+              <span class="wk-tool">Intercom</span>
+              <span class="wk-tool">Slack</span>
+              <span class="wk-tool">GitHub</span>
+              <span class="wk-tool">Notion</span>
+              <span class="wk-tool">Confluence</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="why-asurops" class="lp-outcomes-why section section-alt">
+      <!-- ====================================================== OUTCOMES + WHY -->
+      <section id="why" class="section section-alt">
         <div class="container">
-          <header class="lp-section-head">
+          <header class="section-head">
+            <p class="eyebrow">Outcomes</p>
             <h2>Representative engagement outcomes</h2>
-            <p class="section-sub">
-              Every client context differs—these illustrate the kinds of results we target in QA and support partnerships.
-            </p>
+            <p class="section-sub">Every client context differs — these illustrate the kinds of results we target in QA and support partnerships.</p>
           </header>
-          <div class="lp-outcome-grid">
-            <article class="lp-outcome">
+
+          <div class="wk-outcomes-grid">
+            <article class="wk-outcome">
               <h3>Release readiness for a B2B SaaS roadmap</h3>
-              <p>
-                Regression and UAT aligned to two-week releases; defect triage tied to Jira so product and engineering
-                share one view of quality before go-live.
-              </p>
+              <p>Regression and UAT aligned to two-week releases; defect triage tied to Jira so product and engineering share one view of quality before go-live.</p>
             </article>
-            <article class="lp-outcome">
+            <article class="wk-outcome">
               <h3>L1 support for a growing product line</h3>
-              <p>
-                Ticket queues, severity handling, and user communication during business hours—freeing the core team to
-                focus on fixes and features while users stay unblocked.
-              </p>
+              <p>Ticket queues, severity handling, and user communication during business hours — freeing the core team to focus on fixes and features while users stay unblocked.</p>
             </article>
           </div>
-          <div class="lp-outcomes-why__why">
-            <header class="section-head section-head--wide">
-              <p class="section-label section-label--green">Why Asurops Technologies</p>
+
+          <div class="wk-why">
+            <div>
+              <p class="eyebrow">Why Asurops</p>
               <h2>Built for SaaS delivery</h2>
-            </header>
-            <ul class="why-list">
-              <li>Reliable Remote QA &amp; Support Delivery</li>
-              <li>Flexible Engagement Models</li>
-              <li>Cost-Effective Offshore Services</li>
-              <li>Focused on SaaS and Software Companies</li>
+              <p>Practical engagement models, dependable delivery, and a focus on the SaaS and product company context.</p>
+            </div>
+            <ul class="wk-why-list">
+              <li>Reliable remote QA &amp; support delivery</li>
+              <li>Flexible engagement models — retainer or scoped</li>
+              <li>Cost-effective offshore services</li>
+              <li>Focused on SaaS and software companies</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="section section-cta">
-        <div class="container">
-          <header class="section-head section-head--wide">
-            <p class="section-label section-label--blue">Contact us</p>
-            <h2>Tell us where you need QA or application support.</h2>
-            <p class="section-sub">
-              We’ll suggest scope, engagement model, and next steps—aligned to your product and timelines.
+      <!-- ====================================================== ABOUT -->
+      <section id="about" class="section wk-about">
+        <div class="container wk-about-inner">
+          <figure class="wk-about-figure">
+            <img
+              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
+              alt="A software team collaborating around a laptop"
+              loading="lazy"
+            />
+          </figure>
+          <div>
+            <p class="eyebrow">About Asurops Technologies</p>
+            <h2>Deliver deep impact when it matters most</h2>
+            <p>
+              Asurops Technologies provides remote QA testing and application support to SaaS and product teams.
+              We help organisations release with confidence, keep users productive, and free engineering teams to
+              focus on the roadmap — backed by structured processes, clear communication, and disciplined delivery.
             </p>
+            <div class="wk-about-actions">
+              <a class="btn btn-light" href="#contact">Schedule a consultation</a>
+              <a class="btn btn-outline" href="#offerings" style="border-color: rgba(255,255,255,0.5); color:#fff;">Explore solutions</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================== CONTACT -->
+      <section id="contact" class="section">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">Contact us</p>
+            <h2>Tell us where you need QA or application support</h2>
+            <p class="section-sub">We’ll suggest scope, engagement model, and next steps — aligned to your product and timelines.</p>
           </header>
-          <div class="contact-grid">
-            <div class="contact-item">
-              <h3>Email</h3>
-              <p>
-                <a href="mailto:you@example.com">your email</a>
-                <span class="contact-hint">Update in <code>index.html</code> and in the lead form script.</span>
-              </p>
+
+          <div class="wk-contact-grid">
+            <div class="wk-contact-info">
+              <div class="wk-contact-item">
+                <h3>Email</h3>
+                <p><a href="mailto:hello@asureops.com">hello@asureops.com</a></p>
+              </div>
+              <div class="wk-contact-item">
+                <h3>LinkedIn</h3>
+                <p><a href="https://www.linkedin.com/in/your-profile" rel="noopener noreferrer">linkedin.com/in/your-profile</a></p>
+              </div>
+              <div class="wk-contact-item">
+                <h3>Office hours</h3>
+                <p>Mon – Fri · Aligned to your product cadence and time zone.</p>
+              </div>
+              <div class="wk-contact-item">
+                <h3>What you can expect</h3>
+                <p>A short discovery call, a written proposal with scope and engagement model, and references on request.</p>
+              </div>
             </div>
-            <div class="contact-item">
-              <h3>LinkedIn</h3>
-              <p>
-                <a href="https://www.linkedin.com/in/your-profile" rel="noopener noreferrer">your profile</a>
-                <span class="contact-hint">Replace with your URL.</span>
-              </p>
-            </div>
-            <div class="contact-item contact-item--full">
-              <h3>Contact form</h3>
-              <p>Structured requests via the form at the top of this page—or available on request for embeds.</p>
-            </div>
+
+            <aside class="wk-form-card" aria-labelledby="lead-card-title">
+              <h3 id="lead-card-title">Discuss your requirements</h3>
+              <p class="sub">Get a quick, practical view of how we can support QA and application operations.</p>
+              <form class="wk-form" id="lead-form" novalidate>
+                <label class="wk-field">
+                  <span>Full name <abbr title="required">*</abbr></span>
+                  <input type="text" name="name" required autocomplete="name" placeholder="Your name" />
+                </label>
+                <label class="wk-field">
+                  <span>Business email <abbr title="required">*</abbr></span>
+                  <input type="email" name="email" required autocomplete="email" placeholder="you@company.com" />
+                </label>
+                <label class="wk-field">
+                  <span>Phone</span>
+                  <input type="tel" name="phone" autocomplete="tel" placeholder="+1 …" />
+                </label>
+                <label class="wk-field">
+                  <span>Company / product <abbr title="required">*</abbr></span>
+                  <input type="text" name="company" required autocomplete="organization" placeholder="Organization" />
+                </label>
+                <label class="wk-field">
+                  <span>How can we help?</span>
+                  <textarea name="message" rows="3" placeholder="A few lines about your QA or support need."></textarea>
+                </label>
+                <p class="consent">By submitting, you agree we may contact you about Asurops services.</p>
+                <button type="submit" class="btn btn-primary">Request a conversation <span class="arrow" aria-hidden="true">&rarr;</span></button>
+              </form>
+            </aside>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer lp-footer">
+    <!-- ====================================================== FOOTER -->
+    <footer class="wk-footer">
       <div class="container">
-        <div class="lp-footer-grid">
+        <div class="wk-footer-grid">
           <div>
-            <p class="footer-tagline">Quality Assured. Operations Supported.</p>
-            <p class="lp-footer-about">
-              Asurops Technologies provides remote QA testing and application support for SaaS and product teams—so you
-              can ship with confidence and keep users productive.
+            <div class="wk-footer-brand">
+              <img src="assets/logo.png" width="38" height="38" alt="" decoding="async" />
+              <span>Asurops Technologies</span>
+            </div>
+            <p class="wk-footer-about">
+              Remote QA and application support for SaaS and product teams — so you can ship with confidence and
+              keep users productive.
             </p>
+            <p class="wk-footer-tagline">Quality Assured. Operations Supported.</p>
           </div>
+
           <div>
-            <h3 class="lp-footer-h">Services</h3>
-            <ul class="lp-footer-links">
-              <li><a href="#services">QA &amp; regression</a></li>
-              <li><a href="#services">UAT &amp; release validation</a></li>
-              <li><a href="#services">L1 application support</a></li>
+            <h4>Solutions</h4>
+            <ul>
+              <li><a href="#offerings">QA Services</a></li>
+              <li><a href="#offerings">Application Support</a></li>
+              <li><a href="#offerings">QA + Support</a></li>
               <li><a href="#pricing">Pricing</a></li>
             </ul>
           </div>
+
           <div>
-            <h3 class="lp-footer-h">Company</h3>
-            <ul class="lp-footer-links">
-              <li><a href="#why-asurops">Why Asurops</a></li>
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#about">About Asurops</a></li>
+              <li><a href="#why">Why Asurops</a></li>
+              <li><a href="#industries">Who we work with</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
+
+          <div>
+            <h4>Get in touch</h4>
+            <ul>
+              <li><a href="mailto:hello@asureops.com">hello@asureops.com</a></li>
+              <li><a href="https://www.linkedin.com/in/your-profile" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="#contact">Schedule a consultation</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="footer-inner lp-footer-bottom">
-          <p class="footer-brand">
-            <img class="footer-logo" src="assets/logo.png" width="36" height="36" alt="" decoding="async" />
-            <span class="footer-brand-text"><strong>Asurops Technologies</strong> — Remote QA &amp; application support</span>
-          </p>
-          <p class="footer-copy">&copy; <span id="y"></span> Asurops Technologies. All rights reserved.</p>
+
+        <div class="wk-footer-bottom">
+          <span>&copy; <span id="y"></span> Asurops Technologies. All rights reserved.</span>
+          <span>asureops.com</span>
         </div>
       </div>
     </footer>
 
     <script>
+      // Year
       document.getElementById("y").textContent = new Date().getFullYear();
+
+      // Tabs
+      (function () {
+        var tabs = document.querySelectorAll(".wk-tab");
+        var panels = document.querySelectorAll(".wk-tab-panel");
+        function activate(name) {
+          tabs.forEach(function (t) {
+            var on = t.dataset.tab === name;
+            t.setAttribute("aria-selected", on ? "true" : "false");
+          });
+          panels.forEach(function (p) {
+            var on = p.id === "panel-" + name;
+            p.classList.toggle("is-active", on);
+            if (on) p.removeAttribute("hidden"); else p.setAttribute("hidden", "");
+          });
+        }
+        tabs.forEach(function (t) {
+          t.addEventListener("click", function () { activate(t.dataset.tab); });
+          t.addEventListener("keydown", function (e) {
+            var keys = ["ArrowRight", "ArrowLeft", "Home", "End"];
+            if (keys.indexOf(e.key) === -1) return;
+            e.preventDefault();
+            var arr = Array.prototype.slice.call(tabs);
+            var i = arr.indexOf(t);
+            var next = i;
+            if (e.key === "ArrowRight") next = (i + 1) % arr.length;
+            if (e.key === "ArrowLeft")  next = (i - 1 + arr.length) % arr.length;
+            if (e.key === "Home") next = 0;
+            if (e.key === "End")  next = arr.length - 1;
+            arr[next].focus();
+            activate(arr[next].dataset.tab);
+          });
+        });
+      })();
+
+      // Lead form -> mailto
       (function () {
         var form = document.getElementById("lead-form");
         if (!form) return;
         form.addEventListener("submit", function (e) {
           e.preventDefault();
           var fd = new FormData(form);
-          var name = fd.get("name") || "";
-          var email = fd.get("email") || "";
-          var phone = fd.get("phone") || "";
-          var company = fd.get("company") || "";
           var body =
-            "Name: " +
-            name +
-            "\nEmail: " +
-            email +
-            "\nPhone: " +
-            phone +
-            "\nCompany: " +
-            company +
-            "\n\n— Sent from asurops.com lead form";
-          var mail = "you@example.com";
+            "Name: "    + (fd.get("name")    || "") +
+            "\nEmail: "  + (fd.get("email")   || "") +
+            "\nPhone: "  + (fd.get("phone")   || "") +
+            "\nCompany: " + (fd.get("company") || "") +
+            "\nMessage: " + (fd.get("message") || "") +
+            "\n\n— Sent from asureops.com lead form";
+          var mail = "hello@asureops.com";
           window.location.href =
-            "mailto:" +
-            mail +
-            "?subject=" +
-            encodeURIComponent("Asurops — consultation request") +
-            "&body=" +
-            encodeURIComponent(body);
+            "mailto:" + mail +
+            "?subject=" + encodeURIComponent("Asurops — consultation request") +
+            "&body=" + encodeURIComponent(body);
         });
       })();
     </script>
