@@ -1,0 +1,16 @@
+# OS
+Thumbs.db
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+
+# Node / build artifacts (in case you add tooling later)
+node_modules/
+dist/
+build/
+
+# Local env / secrets
+.env
+.env.local
