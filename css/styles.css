@@ -698,7 +698,12 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
   color: #fff;
   position: relative;
   overflow: hidden;
+  padding-block: clamp(2rem, 3vw, 2.75rem);
 }
+/* Kill the bottom padding of the section that immediately precedes the
+   dark About band so the navy starts right where the gray ends. */
+.section-alt:has(+ #about),
+#why { padding-bottom: 0.25rem; }
 .wk-about-inner {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
