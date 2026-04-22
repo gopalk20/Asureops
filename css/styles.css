@@ -583,6 +583,33 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
 }
 .wk-price-card .btn { align-self: flex-start; }
 
+.wk-pricing-note {
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+  padding: 1.5rem 1.75rem;
+  background: #fff;
+  border: 1px solid var(--wk-line);
+  border-left: 4px solid var(--wk-blue);
+  border-radius: var(--radius-lg);
+}
+.wk-pricing-note h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.2rem;
+  color: var(--wk-navy);
+}
+.wk-pricing-note p {
+  margin: 0 0 0.8rem;
+  color: var(--wk-ink-soft);
+  font-size: 0.98rem;
+}
+.wk-pricing-note-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0 !important;
+}
+
 /* -------------------------------------------------- Industries / tools */
 .wk-audience {
   display: grid;
