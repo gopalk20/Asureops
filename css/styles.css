@@ -796,6 +796,43 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
   margin: 0.25rem 0 0;
 }
 .wk-form .btn { justify-self: start; margin-top: 0.5rem; }
+.wk-form .btn:disabled { opacity: 0.7; cursor: progress; }
+
+.wk-form-error {
+  margin: 0.5rem 0 0;
+  padding: 0.65rem 0.85rem;
+  background: #fff4f4;
+  border: 1px solid #f3c2c2;
+  border-radius: var(--radius);
+  color: #7a1f1f;
+  font-size: 0.9rem;
+}
+.wk-form-error a { color: #7a1f1f; text-decoration: underline; }
+
+.wk-form-success {
+  border-left: 4px solid var(--wk-success, #1A7F37);
+  background: #f1faf3;
+  border: 1px solid #cdebd4;
+  border-left: 4px solid var(--wk-success, #1A7F37);
+  padding: 1.25rem 1.4rem;
+  border-radius: var(--radius);
+  margin-top: 0.25rem;
+}
+.wk-form-success h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.2rem;
+  color: var(--wk-navy);
+}
+.wk-form-success p {
+  margin: 0 0 0.5rem;
+  color: var(--wk-ink);
+  font-size: 0.96rem;
+}
+.wk-form-success p:last-child { margin-bottom: 0; }
+.wk-form-success-meta {
+  font-size: 0.88rem !important;
+  color: var(--wk-ink-soft) !important;
+}
 
 /* -------------------------------------------------- Footer */
 .wk-footer {
