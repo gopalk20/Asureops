@@ -630,6 +630,44 @@
       // Year
       document.getElementById("y").textContent = new Date().getFullYear();
 
+      // Smooth scroll for in-page anchors WITHOUT updating URL hash
+      (function () {
+        document.addEventListener("click", function (e) {
+          var a = e.target.closest && e.target.closest('a[href^="#"]');
+          if (!a) return;
+          var href = a.getAttribute("href");
+          if (!href || href === "#" || href.length < 2) return;
+
+          var target = document.querySelector(href);
+          if (!target) return;
+
+          e.preventDefault();
+
+          // Close mobile nav if open
+          var navToggle = document.getElementById("nav-toggle");
+          if (navToggle && navToggle.checked) navToggle.checked = false;
+
+          var header = document.querySelector(".site-header");
+          var offset = header ? header.getBoundingClientRect().height : 0;
+          var top = target.getBoundingClientRect().top + window.pageYOffset - offset - 8;
+
+          window.scrollTo({ top: top, behavior: "smooth" });
+
+          // Keep URL clean (no #contact / #pricing etc)
+          if (history.replaceState) {
+            history.replaceState(null, "", window.location.pathname + window.location.search);
+          }
+
+          // Move focus for accessibility, then restore tabIndex
+          var prevTab = target.getAttribute("tabindex");
+          target.setAttribute("tabindex", "-1");
+          target.focus({ preventScroll: true });
+          if (prevTab === null) {
+            setTimeout(function () { target.removeAttribute("tabindex"); }, 1000);
+          }
+        });
+      })();
+
       // Tabs
       (function () {
         var tabs = document.querySelectorAll(".wk-tab");
