@@ -185,7 +185,8 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
   letter-spacing: -0.01em;
 }
 .logo:hover { text-decoration: none; color: var(--wk-navy); }
-.logo-mark img { width: 38px; height: 38px; object-fit: contain; }
+.logo-mark img,
+.logo-mark picture img { width: 40px; height: 40px; object-fit: contain; }
 .logo-text { line-height: 1; }
 .logo-accent { color: var(--wk-blue); }
 
@@ -935,7 +936,8 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
   margin-bottom: 1rem;
   color: #fff; font-weight: 700; font-size: 1.15rem;
 }
-.wk-footer-brand img { width: 38px; height: 38px; object-fit: contain; }
+.wk-footer-brand img,
+.wk-footer-brand picture img { width: 40px; height: 40px; object-fit: contain; }
 .wk-footer-tagline {
   font-family: var(--font-display);
   font-style: italic;
