@@ -11,8 +11,9 @@
   --wk-navy:        #001E62;     /* deep navy for hero / footer */
   --wk-navy-2:      #0A2540;
   --wk-ink:         #1A1F2C;     /* body text */
-  --wk-ink-soft:    #3D4A5C;     /* secondary text (WCAG AA on white) */
-  --wk-blue-text:   #0067B3;     /* blue text on light bg (WCAG AA) */
+  --wk-ink-soft:    #3D4A5C;     /* secondary text (WCAG AA, 16px+) */
+  --wk-ink-muted:   #2D3748;     /* small body text on white (WCAG AA) */
+  --wk-blue-text:   #005A99;     /* small accent text on white (WCAG AA) */
   --wk-line:        #E1E5EB;     /* dividers */
   --wk-line-strong: #C7CDD6;
   --wk-bg:          #FFFFFF;
@@ -511,6 +512,7 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
   color: var(--wk-blue-text);
   margin: 0 0 0.6rem;
 }
+.wk-card .wk-card-label { color: #004E87; }
 .wk-card-title {
   font-size: 1.2rem;
   margin: 0 0 0.7rem;
@@ -518,8 +520,9 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
 }
 .wk-card-text {
   margin: 0 0 1.1rem;
-  color: var(--wk-ink-soft);
+  color: var(--wk-ink-muted);
   font-size: 0.96rem;
+  font-weight: 500;
   line-height: 1.55;
   flex: 1 1 auto;
 }
@@ -583,7 +586,8 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
 }
 .wk-price-amount {
   font-size: 1rem;
-  color: var(--wk-ink-soft);
+  color: var(--wk-ink-muted);
+  font-weight: 500;
   margin: 0 0 1rem;
 }
 .wk-price-amount strong {
@@ -716,7 +720,7 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
   padding: 1.4rem 1.5rem 1.5rem;
 }
 .wk-outcome h3 { margin-bottom: 0.5rem; }
-.wk-outcome p { margin: 0; color: var(--wk-ink-soft); font-size: 0.96rem; }
+.wk-outcome p { margin: 0; color: var(--wk-ink-muted); font-size: 0.96rem; font-weight: 500; }
 
 .wk-capabilities {
   margin-top: clamp(1.75rem, 3.5vw, 2.5rem);
@@ -901,6 +905,17 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
   color: #9b1c1c;
 }
 .wk-field-error[hidden] { display: none; }
+.wk-form-summary {
+  margin: 0;
+  padding: 0.75rem 0.9rem;
+  background: #fff4f4;
+  border: 1px solid #f3c2c2;
+  border-radius: var(--radius);
+  color: #7a1f1f;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.wk-form-summary[hidden] { display: none; }
 .wk-form .consent,
 .wk-privacy-note {
   font-size: 0.85rem;

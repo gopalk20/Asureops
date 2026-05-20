@@ -53,102 +53,73 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
 
-    <!-- Structured data (schema.org) -->
+    <!-- Structured data (schema.org @graph) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Asurops Technologies",
-      "url": "https://www.asurops.com/",
-      "logo": "https://www.asurops.com/assets/logo-512.png",
-      "description": "Asurops Technologies provides remote QA testing and L1 application support for SaaS and product teams.",
-      "email": "support@asurops.com",
-      "slogan": "Quality Assured. Operations Supported.",
-      "sameAs": [
-        "https://www.linkedin.com/in/your-profile"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "support@asurops.com",
-        "contactType": "customer support",
-        "availableLanguage": ["English"]
-      }
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Asurops Technologies",
-      "url": "https://www.asurops.com/",
-      "image": "https://www.asurops.com/assets/logo-512.png",
-      "description": "Remote QA services and L1 application support for SaaS, B2B software, and product engineering teams. Functional testing, regression testing SaaS, UAT release validation, incident triage, ticket handling, offshore QA outsourcing. Engagements scoped and priced per requirement.",
-      "serviceType": [
-        "Remote QA services",
-        "Software QA testing",
-        "Manual functional testing",
-        "Functional testing for SaaS",
-        "Regression testing SaaS",
-        "UAT release validation",
-        "Release readiness validation",
-        "L1 application support",
-        "Application support for SaaS",
-        "Ticket handling and triage",
-        "Incident triage support",
-        "Production and incident support",
-        "Product engineering QA",
-        "QA outsourcing for startups",
-        "Quality assurance for B2B software",
-        "Offshore QA services",
-        "QA retainer model",
-        "QA and support partnership",
-        "QA services for delivery agencies",
-        "Sprint-aligned QA capacity"
-      ],
-      "knowsAbout": [
-        "Jira",
-        "Linear",
-        "Azure DevOps",
-        "TestRail",
-        "Playwright",
-        "BrowserStack",
-        "Zendesk",
-        "Intercom",
-        "GitHub",
-        "Confluence"
-      ],
-      "areaServed": "Global",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Asurops engagement options",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "QA Services",
-              "description": "Functional and regression testing, UAT and release validation, sprint-aligned QA capacity."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Application Support",
-              "description": "L1 ticket handling and triage, incident and production support, user communication."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "QA + Support",
-              "description": "Combined pre-release QA and in-life application support under one engagement."
-            }
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.asurops.com/#organization",
+          "name": "Asurops Technologies",
+          "url": "https://www.asurops.com/",
+          "logo": "https://www.asurops.com/assets/logo-512.png",
+          "description": "Asurops Technologies provides remote QA testing and L1 application support for SaaS and product teams.",
+          "email": "support@asurops.com",
+          "slogan": "Quality Assured. Operations Supported.",
+          "sameAs": ["https://www.linkedin.com/in/your-profile"],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "support@asurops.com",
+            "contactType": "customer support",
+            "availableLanguage": ["English"]
           }
-        ]
-      }
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://www.asurops.com/#service",
+          "name": "Asurops Technologies",
+          "url": "https://www.asurops.com/",
+          "image": "https://www.asurops.com/assets/logo-512.png",
+          "provider": { "@id": "https://www.asurops.com/#organization" },
+          "description": "Remote QA services and L1 application support for SaaS, B2B software, and product engineering teams.",
+          "areaServed": "Global",
+          "knowsAbout": ["Jira", "TestRail", "Playwright", "BrowserStack", "Zendesk", "Intercom"],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Asurops engagement options",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@id": "https://www.asurops.com/#qa-service" } },
+              { "@type": "Offer", "itemOffered": { "@id": "https://www.asurops.com/#support-service" } },
+              { "@type": "Offer", "itemOffered": { "@id": "https://www.asurops.com/#combined-service" } }
+            ]
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://www.asurops.com/#qa-service",
+          "name": "QA Services",
+          "provider": { "@id": "https://www.asurops.com/#organization" },
+          "description": "Functional and regression testing, UAT and release validation, sprint-aligned QA capacity.",
+          "serviceType": "Software QA testing"
+        },
+        {
+          "@type": "Service",
+          "@id": "https://www.asurops.com/#support-service",
+          "name": "Application Support",
+          "provider": { "@id": "https://www.asurops.com/#organization" },
+          "description": "L1 ticket handling and triage, incident and production support, user communication.",
+          "serviceType": "L1 application support"
+        },
+        {
+          "@type": "Service",
+          "@id": "https://www.asurops.com/#combined-service",
+          "name": "QA + Support",
+          "provider": { "@id": "https://www.asurops.com/#organization" },
+          "description": "Combined pre-release QA and in-life application support under one engagement.",
+          "serviceType": "QA and support partnership"
+        }
+      ]
     }
     </script>
   </head>
@@ -156,13 +127,23 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <!-- ====================================================== HEADER -->
-    <header class="site-header">
+    <header class="site-header" role="banner">
       <div class="container header-inner">
         <a class="logo" href="#" aria-label="Asurops Technologies — Home">
           <span class="logo-mark">
             <picture>
-              <source srcset="assets/logo.webp" type="image/webp" />
-              <img src="assets/logo.png" width="66" height="44" alt="Asurops logo" decoding="async" />
+              <source
+                type="image/webp"
+                srcset="assets/logo.webp 1x, assets/logo@2x.webp 2x"
+              />
+              <img
+                src="assets/logo.png"
+                srcset="assets/logo.png 1x, assets/logo@2x.png 2x"
+                width="66"
+                height="44"
+                alt="Asurops logo"
+                decoding="async"
+              />
             </picture>
           </span>
           <span class="logo-text">Asu<span class="logo-accent">rops</span></span>
@@ -171,7 +152,7 @@
         <label for="nav-toggle" class="nav-toggle-label" id="nav-toggle-label" aria-controls="site-nav-menu" aria-expanded="false" aria-label="Open menu">
           <span></span><span></span><span></span>
         </label>
-        <nav class="site-nav" id="site-nav-menu" aria-label="Primary">
+        <nav class="site-nav" id="site-nav-menu" role="navigation" aria-label="Primary">
           <ul>
             <li><a href="#offerings">Solutions &amp; Services</a></li>
             <li><a href="#pricing">Engagements</a></li>
@@ -211,7 +192,7 @@
           </div>
           <div class="wk-hero-visual">
             <img
-              src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1100&q=80"
+              src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1100&q=80" srcset="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1100&q=80 800w, https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1600&q=80 1200w" sizes="(max-width: 880px) 100vw, 50vw"
               alt="A QA professional reviewing test results on a laptop"
               width="900"
               height="675"
@@ -264,7 +245,7 @@
             <div class="wk-card-grid">
               <article class="wk-card">
                 <div class="wk-card-media">
-                  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Manual QA testing dashboard on a laptop" loading="lazy" />
+                  <img decoding="async" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="Manual QA testing dashboard on a laptop" loading="lazy" fetchpriority="low" />
                 </div>
                 <div class="wk-card-body">
                   <p class="wk-card-label">Service &amp; Solution</p>
@@ -276,7 +257,7 @@
 
               <article class="wk-card">
                 <div class="wk-card-media">
-                  <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Team reviewing release sign-off checklist" loading="lazy" />
+                  <img decoding="async" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="Team reviewing release sign-off checklist" loading="lazy" fetchpriority="low" />
                 </div>
                 <div class="wk-card-body">
                   <p class="wk-card-label">Service &amp; Solution</p>
@@ -288,7 +269,7 @@
 
               <article class="wk-card">
                 <div class="wk-card-media">
-                  <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="Support engineer handling user tickets" loading="lazy" />
+                  <img decoding="async" src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="Support engineer handling user tickets" loading="lazy" fetchpriority="low" />
                 </div>
                 <div class="wk-card-body">
                   <p class="wk-card-label">Service &amp; Solution</p>
@@ -300,7 +281,7 @@
 
               <article class="wk-card">
                 <div class="wk-card-media">
-                  <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" />
+                  <img decoding="async" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="" loading="lazy" fetchpriority="low" />
                 </div>
                 <div class="wk-card-body">
                   <p class="wk-card-label">Featured Insight</p>
@@ -324,7 +305,7 @@
             </div>
             <div class="wk-card-grid">
               <article class="wk-card">
-                <div class="wk-card-media"><img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></div>
+                <div class="wk-card-media"><img decoding="async" src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="" loading="lazy" fetchpriority="low" /></div>
                 <div class="wk-card-body">
                   <p class="wk-card-label">Service &amp; Solution</p>
                   <h3 class="wk-card-title">Functional &amp; regression testing</h3>
@@ -333,7 +314,7 @@
                 </div>
               </article>
               <article class="wk-card">
-                <div class="wk-card-media"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></div>
+                <div class="wk-card-media"><img decoding="async" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="" loading="lazy" fetchpriority="low" /></div>
                 <div class="wk-card-body">
                   <p class="wk-card-label">Service &amp; Solution</p>
                   <h3 class="wk-card-title">UAT &amp; release validation</h3>
@@ -342,7 +323,7 @@
                 </div>
               </article>
               <article class="wk-card">
-                <div class="wk-card-media"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></div>
+                <div class="wk-card-media"><img decoding="async" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="" loading="lazy" fetchpriority="low" /></div>
                 <div class="wk-card-body">
                   <p class="wk-card-label">Service &amp; Solution</p>
                   <h3 class="wk-card-title">Dedicated QA capacity</h3>
@@ -365,7 +346,7 @@
             </div>
             <div class="wk-card-grid">
               <article class="wk-card">
-                <div class="wk-card-media"><img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></div>
+                <div class="wk-card-media"><img decoding="async" src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="" loading="lazy" fetchpriority="low" /></div>
                 <div class="wk-card-body">
                   <p class="wk-card-label">Service &amp; Solution</p>
                   <h3 class="wk-card-title">L1 ticket handling</h3>
@@ -374,7 +355,7 @@
                 </div>
               </article>
               <article class="wk-card">
-                <div class="wk-card-media"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></div>
+                <div class="wk-card-media"><img decoding="async" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="" loading="lazy" fetchpriority="low" /></div>
                 <div class="wk-card-body">
                   <p class="wk-card-label">Service &amp; Solution</p>
                   <h3 class="wk-card-title">Incident &amp; production support</h3>
@@ -383,7 +364,7 @@
                 </div>
               </article>
               <article class="wk-card">
-                <div class="wk-card-media"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></div>
+                <div class="wk-card-media"><img decoding="async" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="" loading="lazy" fetchpriority="low" /></div>
                 <div class="wk-card-body">
                   <p class="wk-card-label">Service &amp; Solution</p>
                   <h3 class="wk-card-title">User support &amp; coordination</h3>
@@ -406,7 +387,7 @@
             </div>
             <div class="wk-card-grid">
               <article class="wk-card">
-                <div class="wk-card-media"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></div>
+                <div class="wk-card-media"><img decoding="async" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="" loading="lazy" fetchpriority="low" /></div>
                 <div class="wk-card-body">
                   <p class="wk-card-label">Service &amp; Solution</p>
                   <h3 class="wk-card-title">Pre-release QA + L1 support</h3>
@@ -415,7 +396,7 @@
                 </div>
               </article>
               <article class="wk-card">
-                <div class="wk-card-media"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></div>
+                <div class="wk-card-media"><img decoding="async" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="" loading="lazy" fetchpriority="low" /></div>
                 <div class="wk-card-body">
                   <p class="wk-card-label">Featured Outcome</p>
                   <h3 class="wk-card-title">One product knowledge base</h3>
@@ -424,7 +405,7 @@
                 </div>
               </article>
               <article class="wk-card">
-                <div class="wk-card-media"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></div>
+                <div class="wk-card-media"><img decoding="async" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="" loading="lazy" fetchpriority="low" /></div>
                 <div class="wk-card-body">
                   <p class="wk-card-label">Featured Outcome</p>
                   <h3 class="wk-card-title">Predictable release cadence</h3>
@@ -598,9 +579,9 @@
         <div class="container wk-about-inner">
           <figure class="wk-about-figure">
             <img
-              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
+              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1100&q=80" srcset="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1100&q=80 800w, https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80 1200w" sizes="(max-width: 880px) 100vw, 50vw"
               alt="A software team collaborating around a laptop"
-              loading="lazy"
+              loading="lazy" fetchpriority="low"
             />
           </figure>
           <div>
@@ -665,29 +646,31 @@
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
+                <p class="wk-form-summary" id="form-errors-summary" role="alert" tabindex="-1" hidden></p>
+
                 <label class="wk-field" id="field-wrap-name">
                   <span id="label-name">Full name <abbr title="required">*</abbr></span>
-                  <input type="text" id="field-name" name="name" required autocomplete="name" placeholder="Your name" aria-required="true" aria-describedby="error-name" />
+                  <input type="text" id="field-name" name="name" required autocomplete="name" placeholder="Your name" aria-required="true" aria-labelledby="label-name" />
                   <span class="wk-field-error" id="error-name" role="alert" hidden></span>
                 </label>
                 <label class="wk-field" id="field-wrap-email">
                   <span id="label-email">Business email <abbr title="required">*</abbr></span>
-                  <input type="email" id="field-email" name="email" required autocomplete="email" placeholder="you@company.com" aria-required="true" aria-describedby="error-email" />
+                  <input type="email" id="field-email" name="email" required autocomplete="email" placeholder="you@company.com" aria-required="true" aria-labelledby="label-email" />
                   <span class="wk-field-error" id="error-email" role="alert" hidden></span>
                 </label>
                 <label class="wk-field" id="field-wrap-phone">
                   <span id="label-phone">Phone</span>
-                  <input type="tel" id="field-phone" name="phone" autocomplete="tel" placeholder="+1 …" aria-describedby="error-phone" />
+                  <input type="tel" id="field-phone" name="phone" autocomplete="tel" placeholder="+1 …" aria-labelledby="label-phone" />
                   <span class="wk-field-error" id="error-phone" role="alert" hidden></span>
                 </label>
                 <label class="wk-field" id="field-wrap-company">
                   <span id="label-company">Company / product <abbr title="required">*</abbr></span>
-                  <input type="text" id="field-company" name="company" required autocomplete="organization" placeholder="Organization" aria-required="true" aria-describedby="error-company" />
+                  <input type="text" id="field-company" name="company" required autocomplete="organization" placeholder="Organization" aria-required="true" aria-labelledby="label-company" />
                   <span class="wk-field-error" id="error-company" role="alert" hidden></span>
                 </label>
                 <label class="wk-field" id="field-wrap-message">
                   <span id="label-message">How can we help?</span>
-                  <textarea id="field-message" name="message" rows="3" placeholder="A few lines about your QA or support need." aria-describedby="error-message"></textarea>
+                  <textarea id="field-message" name="message" rows="3" placeholder="A few lines about your QA or support need." aria-labelledby="label-message"></textarea>
                   <span class="wk-field-error" id="error-message" role="alert" hidden></span>
                 </label>
                 <p class="consent">By submitting, you agree we may contact you about Asurops services.</p>
@@ -695,7 +678,7 @@
                   We use your details only to respond to this inquiry. We don&rsquo;t sell your data.
                   To request access or deletion, email <a href="mailto:support@asurops.com">support@asurops.com</a>.
                 </p>
-                <button type="submit" class="btn btn-primary" id="lead-submit" aria-describedby="lead-error">
+                <button type="submit" class="btn btn-primary" id="lead-submit" aria-label="Request a conversation — submit contact form" aria-describedby="lead-error lead-privacy-note">
                   <span class="lead-submit-label">Request a conversation</span>
                   <span class="arrow" aria-hidden="true">&rarr;</span>
                 </button>
@@ -729,8 +712,15 @@
           <div>
             <div class="wk-footer-brand">
               <picture>
-                <source srcset="assets/logo.webp" type="image/webp" />
-                <img src="assets/logo.png" width="66" height="44" alt="Asurops logo" decoding="async" />
+                <source type="image/webp" srcset="assets/logo.webp 1x, assets/logo@2x.webp 2x" />
+                <img
+                  src="assets/logo.png"
+                  srcset="assets/logo.png 1x, assets/logo@2x.png 2x"
+                  width="66"
+                  height="44"
+                  alt="Asurops logo"
+                  decoding="async"
+                />
               </picture>
               <span>Asurops Technologies</span>
             </div>
@@ -874,6 +864,7 @@
         var form    = document.getElementById("lead-form");
         var success = document.getElementById("lead-success");
         var errorEl = document.getElementById("lead-error");
+        var summary = document.getElementById("form-errors-summary");
         var btn     = document.getElementById("lead-submit");
         if (!form) return;
 
@@ -882,10 +873,20 @@
           { id: "field-email",   wrap: "field-wrap-email",   required: true,  msg: "Please enter your business email.", email: true },
           { id: "field-company", wrap: "field-wrap-company", required: true,  msg: "Please enter your company or product name." },
           { id: "field-phone",   wrap: "field-wrap-phone",   required: false },
-          { id: "field-message", wrap: "field-wrap-message", required: false }
+          { id: "field-message", wrap: "field-wrap-message", required: false, min: 10, msg: "Please add at least 10 characters so we can understand your need." }
         ];
 
-        function validateField(rule) {
+        function syncFieldAria(input, err, invalid) {
+          if (invalid) {
+            input.setAttribute("aria-invalid", "true");
+            input.setAttribute("aria-describedby", err.id);
+          } else {
+            input.setAttribute("aria-invalid", "false");
+            input.removeAttribute("aria-describedby");
+          }
+        }
+
+        function validateField(rule, announce) {
           var input = document.getElementById(rule.id);
           var wrap  = document.getElementById(rule.wrap);
           var err   = document.getElementById("error-" + rule.id.replace("field-", ""));
@@ -898,30 +899,56 @@
             message = rule.msg || "This field is required.";
           } else if (rule.email && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
             message = "Please enter a valid email address.";
+          } else if (rule.min && value && value.length < rule.min) {
+            message = rule.msg;
           }
 
           var invalid = message.length > 0;
           wrap.classList.toggle("is-invalid", invalid);
-          input.setAttribute("aria-invalid", invalid ? "true" : "false");
+          syncFieldAria(input, err, invalid);
           err.textContent = message;
           err.hidden = !invalid;
+          if (invalid && announce) err.setAttribute("aria-live", "polite");
           return !invalid;
         }
 
-        function validateAll() {
+        function showSummary(count) {
+          if (!summary) return;
+          if (count > 0) {
+            summary.hidden = false;
+            summary.textContent = count === 1
+              ? "There is 1 error below. Please correct it and try again."
+              : "There are " + count + " errors below. Please correct them and try again.";
+            summary.focus();
+          } else {
+            summary.hidden = true;
+            summary.textContent = "";
+          }
+        }
+
+        function validateAll(announce) {
           var ok = true;
+          var errors = 0;
           rules.forEach(function (rule) {
-            if (!validateField(rule)) ok = false;
+            if (!validateField(rule, announce)) {
+              ok = false;
+              errors += 1;
+            }
           });
+          showSummary(errors);
           return ok;
         }
 
         rules.forEach(function (rule) {
           var input = document.getElementById(rule.id);
           if (!input) return;
-          input.addEventListener("blur", function () { validateField(rule); });
+          input.addEventListener("blur", function () { validateField(rule, false); });
           input.addEventListener("input", function () {
-            if (input.getAttribute("aria-invalid") === "true") validateField(rule);
+            if (input.getAttribute("aria-invalid") === "true") {
+              validateField(rule, false);
+              var remaining = form.querySelectorAll('[aria-invalid="true"]').length;
+              showSummary(remaining);
+            }
           });
         });
 
@@ -932,11 +959,13 @@
           e.preventDefault();
           errorEl.hidden = true;
 
-          if (!validateAll()) {
+          if (!validateAll(true)) {
             var firstInvalid = form.querySelector('[aria-invalid="true"]');
             if (firstInvalid) firstInvalid.focus();
             return;
           }
+
+          if (summary) summary.hidden = true;
 
           btn.disabled = true;
           form.setAttribute("aria-busy", "true");
