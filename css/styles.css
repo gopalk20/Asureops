@@ -185,8 +185,25 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
   letter-spacing: -0.01em;
 }
 .logo:hover { text-decoration: none; color: var(--wk-navy); }
+.logo-mark {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  line-height: 0;
+}
+.logo-mark picture {
+  display: block;
+  line-height: 0;
+}
 .logo-mark img,
-.logo-mark picture img { width: 40px; height: 40px; object-fit: contain; }
+.logo-mark picture img {
+  display: block;
+  width: auto;
+  height: 44px;
+  max-width: 66px;
+  object-fit: contain;
+  object-position: center;
+}
 .logo-text { line-height: 1; }
 .logo-accent { color: var(--wk-blue); }
 
@@ -936,8 +953,16 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
   margin-bottom: 1rem;
   color: #fff; font-weight: 700; font-size: 1.15rem;
 }
+.wk-footer-brand picture { display: block; line-height: 0; }
 .wk-footer-brand img,
-.wk-footer-brand picture img { width: 40px; height: 40px; object-fit: contain; }
+.wk-footer-brand picture img {
+  display: block;
+  width: auto;
+  height: 44px;
+  max-width: 66px;
+  object-fit: contain;
+  object-position: center;
+}
 .wk-footer-tagline {
   font-family: var(--font-display);
   font-style: italic;
