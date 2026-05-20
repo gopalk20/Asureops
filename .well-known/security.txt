@@ -1,0 +1,3 @@
+Contact: mailto:support@asurops.com
+Preferred-Languages: en
+Canonical: https://www.asurops.com/.well-known/security.txt

@@ -43,7 +43,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      as="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
@@ -113,7 +118,37 @@
         "GitHub",
         "Confluence"
       ],
-      "areaServed": "Global"
+      "areaServed": "Global",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Asurops engagement options",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "QA Services",
+              "description": "Functional and regression testing, UAT and release validation, sprint-aligned QA capacity."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Application Support",
+              "description": "L1 ticket handling and triage, incident and production support, user communication."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "QA + Support",
+              "description": "Combined pre-release QA and in-life application support under one engagement."
+            }
+          }
+        ]
+      }
     }
     </script>
   </head>
@@ -133,10 +168,10 @@
           <span class="logo-text">Asu<span class="logo-accent">rops</span></span>
         </a>
         <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
-        <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">
+        <label for="nav-toggle" class="nav-toggle-label" id="nav-toggle-label" aria-controls="site-nav-menu" aria-expanded="false" aria-label="Open menu">
           <span></span><span></span><span></span>
         </label>
-        <nav class="site-nav" aria-label="Primary">
+        <nav class="site-nav" id="site-nav-menu" aria-label="Primary">
           <ul>
             <li><a href="#offerings">Solutions &amp; Services</a></li>
             <li><a href="#pricing">Engagements</a></li>
@@ -585,11 +620,11 @@
       </section>
 
       <!-- ====================================================== CONTACT -->
-      <section id="contact" class="section">
+      <section id="contact" class="section" aria-labelledby="contact-heading">
         <div class="container">
           <header class="section-head">
             <p class="eyebrow">Contact us</p>
-            <h2>Tell us where you need QA or application support</h2>
+            <h2 id="contact-heading">Tell us where you need QA or application support</h2>
             <p class="section-sub">We’ll suggest scope, engagement model, and next steps — aligned to your product and timelines.</p>
           </header>
 
@@ -623,39 +658,49 @@
                 action="https://formsubmit.co/ajax/support@asurops.com"
                 method="POST"
                 novalidate
+                aria-describedby="lead-privacy-note"
               >
                 <input type="hidden" name="_subject" value="Asurops — new lead from website" />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_captcha" value="false" />
-                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
-                <label class="wk-field">
-                  <span>Full name <abbr title="required">*</abbr></span>
-                  <input type="text" name="name" required autocomplete="name" placeholder="Your name" />
+                <label class="wk-field" id="field-wrap-name">
+                  <span id="label-name">Full name <abbr title="required">*</abbr></span>
+                  <input type="text" id="field-name" name="name" required autocomplete="name" placeholder="Your name" aria-required="true" aria-describedby="error-name" />
+                  <span class="wk-field-error" id="error-name" role="alert" hidden></span>
                 </label>
-                <label class="wk-field">
-                  <span>Business email <abbr title="required">*</abbr></span>
-                  <input type="email" name="email" required autocomplete="email" placeholder="you@company.com" />
+                <label class="wk-field" id="field-wrap-email">
+                  <span id="label-email">Business email <abbr title="required">*</abbr></span>
+                  <input type="email" id="field-email" name="email" required autocomplete="email" placeholder="you@company.com" aria-required="true" aria-describedby="error-email" />
+                  <span class="wk-field-error" id="error-email" role="alert" hidden></span>
                 </label>
-                <label class="wk-field">
-                  <span>Phone</span>
-                  <input type="tel" name="phone" autocomplete="tel" placeholder="+1 …" />
+                <label class="wk-field" id="field-wrap-phone">
+                  <span id="label-phone">Phone</span>
+                  <input type="tel" id="field-phone" name="phone" autocomplete="tel" placeholder="+1 …" aria-describedby="error-phone" />
+                  <span class="wk-field-error" id="error-phone" role="alert" hidden></span>
                 </label>
-                <label class="wk-field">
-                  <span>Company / product <abbr title="required">*</abbr></span>
-                  <input type="text" name="company" required autocomplete="organization" placeholder="Organization" />
+                <label class="wk-field" id="field-wrap-company">
+                  <span id="label-company">Company / product <abbr title="required">*</abbr></span>
+                  <input type="text" id="field-company" name="company" required autocomplete="organization" placeholder="Organization" aria-required="true" aria-describedby="error-company" />
+                  <span class="wk-field-error" id="error-company" role="alert" hidden></span>
                 </label>
-                <label class="wk-field">
-                  <span>How can we help?</span>
-                  <textarea name="message" rows="3" placeholder="A few lines about your QA or support need."></textarea>
+                <label class="wk-field" id="field-wrap-message">
+                  <span id="label-message">How can we help?</span>
+                  <textarea id="field-message" name="message" rows="3" placeholder="A few lines about your QA or support need." aria-describedby="error-message"></textarea>
+                  <span class="wk-field-error" id="error-message" role="alert" hidden></span>
                 </label>
                 <p class="consent">By submitting, you agree we may contact you about Asurops services.</p>
-                <button type="submit" class="btn btn-primary" id="lead-submit">
+                <p class="wk-privacy-note" id="lead-privacy-note">
+                  We use your details only to respond to this inquiry. We don&rsquo;t sell your data.
+                  To request access or deletion, email <a href="mailto:support@asurops.com">support@asurops.com</a>.
+                </p>
+                <button type="submit" class="btn btn-primary" id="lead-submit" aria-describedby="lead-error">
                   <span class="lead-submit-label">Request a conversation</span>
                   <span class="arrow" aria-hidden="true">&rarr;</span>
                 </button>
-                <p class="wk-form-error" id="lead-error" role="alert" hidden>
-                  Sorry — something went wrong sending your message. Please email
+                <p class="wk-form-error" id="lead-error" role="alert" aria-live="assertive" hidden>
+                  Sorry — something went wrong sending your message. Please check the highlighted fields or email
                   <a href="mailto:support@asurops.com">support@asurops.com</a> directly.
                 </p>
               </form>
@@ -810,7 +855,21 @@
         });
       })();
 
-      // Lead form -> Formsubmit (AJAX) with inline thank-you state
+      // Mobile nav — sync aria-expanded with checkbox state
+      (function () {
+        var toggle = document.getElementById("nav-toggle");
+        var label  = document.getElementById("nav-toggle-label");
+        if (!toggle || !label) return;
+        function syncNav() {
+          var open = toggle.checked;
+          label.setAttribute("aria-expanded", open ? "true" : "false");
+          label.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        }
+        toggle.addEventListener("change", syncNav);
+        syncNav();
+      })();
+
+      // Lead form — field validation + Formsubmit (AJAX)
       (function () {
         var form    = document.getElementById("lead-form");
         var success = document.getElementById("lead-success");
@@ -818,19 +877,69 @@
         var btn     = document.getElementById("lead-submit");
         if (!form) return;
 
+        var rules = [
+          { id: "field-name",    wrap: "field-wrap-name",    required: true,  msg: "Please enter your full name." },
+          { id: "field-email",   wrap: "field-wrap-email",   required: true,  msg: "Please enter your business email.", email: true },
+          { id: "field-company", wrap: "field-wrap-company", required: true,  msg: "Please enter your company or product name." },
+          { id: "field-phone",   wrap: "field-wrap-phone",   required: false },
+          { id: "field-message", wrap: "field-wrap-message", required: false }
+        ];
+
+        function validateField(rule) {
+          var input = document.getElementById(rule.id);
+          var wrap  = document.getElementById(rule.wrap);
+          var err   = document.getElementById("error-" + rule.id.replace("field-", ""));
+          if (!input || !wrap || !err) return true;
+
+          var value = (input.value || "").trim();
+          var message = "";
+
+          if (rule.required && !value) {
+            message = rule.msg || "This field is required.";
+          } else if (rule.email && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+            message = "Please enter a valid email address.";
+          }
+
+          var invalid = message.length > 0;
+          wrap.classList.toggle("is-invalid", invalid);
+          input.setAttribute("aria-invalid", invalid ? "true" : "false");
+          err.textContent = message;
+          err.hidden = !invalid;
+          return !invalid;
+        }
+
+        function validateAll() {
+          var ok = true;
+          rules.forEach(function (rule) {
+            if (!validateField(rule)) ok = false;
+          });
+          return ok;
+        }
+
+        rules.forEach(function (rule) {
+          var input = document.getElementById(rule.id);
+          if (!input) return;
+          input.addEventListener("blur", function () { validateField(rule); });
+          input.addEventListener("input", function () {
+            if (input.getAttribute("aria-invalid") === "true") validateField(rule);
+          });
+        });
+
         var defaultBtnLabel = btn.querySelector(".lead-submit-label");
         var defaultLabelTxt = defaultBtnLabel ? defaultBtnLabel.textContent : "Request a conversation";
 
         form.addEventListener("submit", function (e) {
           e.preventDefault();
+          errorEl.hidden = true;
 
-          if (!form.checkValidity()) {
-            form.reportValidity();
+          if (!validateAll()) {
+            var firstInvalid = form.querySelector('[aria-invalid="true"]');
+            if (firstInvalid) firstInvalid.focus();
             return;
           }
 
-          errorEl.hidden = true;
           btn.disabled = true;
+          form.setAttribute("aria-busy", "true");
           if (defaultBtnLabel) defaultBtnLabel.textContent = "Sending…";
 
           var fd = new FormData(form);
@@ -846,13 +955,16 @@
           })
           .then(function () {
             form.hidden = true;
+            form.setAttribute("aria-busy", "false");
             success.hidden = false;
             success.scrollIntoView({ behavior: "smooth", block: "center" });
           })
           .catch(function () {
             errorEl.hidden = false;
             btn.disabled = false;
+            form.setAttribute("aria-busy", "false");
             if (defaultBtnLabel) defaultBtnLabel.textContent = defaultLabelTxt;
+            errorEl.focus();
           });
         });
       })();

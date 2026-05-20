@@ -11,7 +11,8 @@
   --wk-navy:        #001E62;     /* deep navy for hero / footer */
   --wk-navy-2:      #0A2540;
   --wk-ink:         #1A1F2C;     /* body text */
-  --wk-ink-soft:    #4A5568;     /* secondary text */
+  --wk-ink-soft:    #3D4A5C;     /* secondary text (WCAG AA on white) */
+  --wk-blue-text:   #0067B3;     /* blue text on light bg (WCAG AA) */
   --wk-line:        #E1E5EB;     /* dividers */
   --wk-line-strong: #C7CDD6;
   --wk-bg:          #FFFFFF;
@@ -29,7 +30,8 @@
   /* Layout */
   --max: 1240px;
   --container-inline: clamp(1rem, 4vw, 2.5rem);
-  --section-pad-y: clamp(0.75rem, 1.25vw, 1.25rem);
+  --section-pad-y: clamp(1.25rem, 2.5vw, 2.5rem);
+  --focus-ring: 0 0 0 3px var(--wk-blue-tint);
   --radius-sm: 4px;
   --radius:    8px;
   --radius-lg: 12px;
@@ -57,9 +59,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-img, svg { max-width: 100%; display: block; }
-a { color: var(--wk-blue); text-decoration: none; }
+img, svg { max-width: 100%; display: block; height: auto; }
+a { color: var(--wk-blue-text); text-decoration: none; }
 a:hover { color: var(--wk-blue-dark); text-decoration: underline; }
+
+:focus { outline: none; }
+:focus-visible {
+  outline: 3px solid var(--wk-blue);
+  outline-offset: 3px;
+}
+button:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--wk-blue-dark);
+  outline-offset: 3px;
+}
 
 h1, h2, h3, h4, h5 {
   font-family: var(--font-display);
@@ -102,7 +115,7 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--wk-blue);
+  color: var(--wk-blue-text);
   margin: 0 0 0.85rem;
 }
 
@@ -128,6 +141,7 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
   border-radius: 999px;
   border: 1px solid transparent;
   cursor: pointer;
+  min-height: 44px;
   transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
   text-decoration: none;
 }
@@ -155,7 +169,7 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
 .arrow-link {
   display: inline-flex; align-items: center; gap: 0.4rem;
   font-weight: 600;
-  color: var(--wk-blue);
+  color: var(--wk-blue-text);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   padding-bottom: 2px;
@@ -205,7 +219,7 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
   object-position: center;
 }
 .logo-text { line-height: 1; }
-.logo-accent { color: var(--wk-blue); }
+.logo-accent { color: var(--wk-blue-text); }
 
 .site-nav { display: flex; align-items: center; }
 .site-nav ul {
@@ -494,7 +508,7 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--wk-blue);
+  color: var(--wk-blue-text);
   margin: 0 0 0.6rem;
 }
 .wk-card-title {
@@ -869,16 +883,33 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
 }
 .wk-field input:focus,
 .wk-field textarea:focus {
-  outline: none;
   border-color: var(--wk-blue);
-  box-shadow: 0 0 0 3px var(--wk-blue-tint);
+  box-shadow: var(--focus-ring);
 }
-.wk-form .consent {
-  font-size: 0.8rem;
+.wk-field.is-invalid input,
+.wk-field.is-invalid textarea {
+  border-color: #c53030;
+}
+.wk-field.is-invalid input:focus,
+.wk-field.is-invalid textarea:focus {
+  box-shadow: 0 0 0 3px rgba(197, 48, 48, 0.2);
+}
+.wk-field-error {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #9b1c1c;
+}
+.wk-field-error[hidden] { display: none; }
+.wk-form .consent,
+.wk-privacy-note {
+  font-size: 0.85rem;
   color: var(--wk-ink-soft);
   margin: 0.25rem 0 0;
+  line-height: 1.5;
 }
-.wk-form .btn { justify-self: start; margin-top: 0.5rem; }
+.wk-privacy-note a { color: var(--wk-blue-text); font-weight: 600; }
+.wk-form .btn { justify-self: start; margin-top: 0.5rem; min-height: 44px; }
 .wk-form .btn:disabled { opacity: 0.7; cursor: progress; }
 
 .wk-form-error {
@@ -920,7 +951,7 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
 /* -------------------------------------------------- Footer */
 .wk-footer {
   background: var(--wk-navy);
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.92);
   padding-block: clamp(2rem, 3.5vw, 3rem) 1.5rem;
   margin-top: 0;
 }
@@ -942,7 +973,7 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
 .wk-footer ul { list-style: none; padding: 0; margin: 0; }
 .wk-footer ul li { margin-bottom: 0.55rem; }
 .wk-footer a {
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.92);
   font-size: 0.95rem;
   text-decoration: none;
 }
@@ -974,7 +1005,7 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
 .wk-footer-about {
   font-size: 0.95rem;
   margin: 0;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.88);
   max-width: 38ch;
 }
 .wk-footer-bottom {
@@ -984,9 +1015,9 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
   display: flex; justify-content: space-between; align-items: center;
   flex-wrap: wrap; gap: 1rem;
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.82);
 }
-.wk-footer-bottom a { color: rgba(255, 255, 255, 0.78); }
+.wk-footer-bottom a { color: rgba(255, 255, 255, 0.92); }
 
 /* -------------------------------------------------- Blog */
 .blog-list {
@@ -1115,6 +1146,53 @@ ul { padding-left: 1.15rem; margin: 0 0 1rem; }
   margin-top: 2rem;
   padding-top: 1.25rem;
   border-top: 1px solid var(--wk-line);
+}
+
+/* -------------------------------------------------- Small screens */
+@media (max-width: 479px) {
+  :root {
+    --container-inline: 1.15rem;
+    --section-pad-y: 1.75rem;
+  }
+
+  body {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+    font-size: 1rem;
+    padding: 0.9rem 1.25rem;
+  }
+
+  .wk-form .btn { width: 100%; justify-self: stretch; }
+
+  .wk-hero-ctas a {
+    width: 100%;
+    max-width: none;
+    font-size: 1rem;
+    line-height: 1.45;
+    padding: 0.65rem 0;
+  }
+
+  .wk-hero-lede,
+  .section-head .section-sub {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .site-nav .nav-cta {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .wk-price-card .btn { width: 100%; justify-content: center; }
+  .wk-pricing-note-cta { display: flex; flex-direction: column; gap: 0.75rem; }
+  .wk-pricing-note-cta .btn { width: 100%; justify-content: center; }
 }
 
 /* -------------------------------------------------- Utility */
