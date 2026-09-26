@@ -53,73 +53,80 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
 
-    <!-- Structured data (schema.org @graph) -->
+    <!-- Structured data: Organization -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "@id": "https://www.asurops.com/#organization",
-          "name": "Asurops Technologies",
-          "url": "https://www.asurops.com/",
-          "logo": "https://www.asurops.com/assets/logo-512.png",
-          "description": "Asurops Technologies provides remote QA testing and L1 application support for SaaS and product teams.",
-          "email": "support@asurops.com",
-          "slogan": "Quality Assured. Operations Supported.",
-          "sameAs": ["https://www.linkedin.com/in/your-profile"],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "email": "support@asurops.com",
-            "contactType": "customer support",
-            "availableLanguage": ["English"]
+      "@type": "Organization",
+      "name": "Asurops Technologies",
+      "url": "https://www.asurops.com/",
+      "logo": "https://www.asurops.com/assets/logo-512.png",
+      "image": "https://www.asurops.com/assets/logo-512.png",
+      "description": "Asurops Technologies provides remote QA testing and L1 application support for SaaS and product teams.",
+      "email": "support@asurops.com",
+      "slogan": "Quality Assured. Operations Supported.",
+      "sameAs": ["https://www.linkedin.com/in/asurops/"],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "support@asurops.com",
+        "contactType": "customer support",
+        "availableLanguage": ["English"]
+      }
+    }
+    </script>
+    <!-- Structured data: Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Remote QA and Application Support",
+      "url": "https://www.asurops.com/",
+      "image": "https://www.asurops.com/assets/logo-512.png",
+      "description": "Remote QA services and L1 application support for SaaS and product teams: functional testing, regression testing, UAT release validation, ticket triage, and incident support.",
+      "serviceType": [
+        "QA Services",
+        "Application Support",
+        "QA + Support"
+      ],
+      "areaServed": {
+        "@type": "Place",
+        "name": "Global"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Asurops Technologies",
+        "url": "https://www.asurops.com/"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Asurops engagement options",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "QA Services",
+              "description": "Functional and regression testing, UAT and release validation, sprint-aligned QA capacity."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Application Support",
+              "description": "L1 ticket handling and triage, incident and production support, user communication."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "QA + Support",
+              "description": "Combined pre-release QA and in-life application support under one engagement."
+            }
           }
-        },
-        {
-          "@type": "ProfessionalService",
-          "@id": "https://www.asurops.com/#service",
-          "name": "Asurops Technologies",
-          "url": "https://www.asurops.com/",
-          "image": "https://www.asurops.com/assets/logo-512.png",
-          "provider": { "@id": "https://www.asurops.com/#organization" },
-          "description": "Remote QA services and L1 application support for SaaS, B2B software, and product engineering teams.",
-          "areaServed": "Global",
-          "knowsAbout": ["Jira", "TestRail", "Playwright", "BrowserStack", "Zendesk", "Intercom"],
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Asurops engagement options",
-            "itemListElement": [
-              { "@type": "Offer", "itemOffered": { "@id": "https://www.asurops.com/#qa-service" } },
-              { "@type": "Offer", "itemOffered": { "@id": "https://www.asurops.com/#support-service" } },
-              { "@type": "Offer", "itemOffered": { "@id": "https://www.asurops.com/#combined-service" } }
-            ]
-          }
-        },
-        {
-          "@type": "Service",
-          "@id": "https://www.asurops.com/#qa-service",
-          "name": "QA Services",
-          "provider": { "@id": "https://www.asurops.com/#organization" },
-          "description": "Functional and regression testing, UAT and release validation, sprint-aligned QA capacity.",
-          "serviceType": "Software QA testing"
-        },
-        {
-          "@type": "Service",
-          "@id": "https://www.asurops.com/#support-service",
-          "name": "Application Support",
-          "provider": { "@id": "https://www.asurops.com/#organization" },
-          "description": "L1 ticket handling and triage, incident and production support, user communication.",
-          "serviceType": "L1 application support"
-        },
-        {
-          "@type": "Service",
-          "@id": "https://www.asurops.com/#combined-service",
-          "name": "QA + Support",
-          "provider": { "@id": "https://www.asurops.com/#organization" },
-          "description": "Combined pre-release QA and in-life application support under one engagement.",
-          "serviceType": "QA and support partnership"
-        }
-      ]
+        ]
+      }
     }
     </script>
   </head>
@@ -132,10 +139,8 @@
         <a class="logo" href="#" aria-label="Asurops Technologies — Home">
           <span class="logo-mark">
             <picture>
-              <source
-                type="image/webp"
-                srcset="assets/logo.webp 1x, assets/logo@2x.webp 2x"
-              />
+              <source srcset="assets/logo.svg" type="image/svg+xml" />
+              <source type="image/webp" srcset="assets/logo.webp 1x, assets/logo@2x.webp 2x" />
               <img
                 src="assets/logo.png"
                 srcset="assets/logo.png 1x, assets/logo@2x.png 2x"
@@ -617,7 +622,7 @@
               </div>
               <div class="wk-contact-item">
                 <h3>LinkedIn</h3>
-                <p><a href="https://www.linkedin.com/in/your-profile" rel="noopener noreferrer">linkedin.com/in/your-profile</a></p>
+                <p><a href="https://www.linkedin.com/in/asurops/" rel="noopener noreferrer">linkedin.com/in/asurops</a></p>
               </div>
               <div class="wk-contact-item">
                 <h3>Office hours</h3>
@@ -712,6 +717,7 @@
           <div>
             <div class="wk-footer-brand">
               <picture>
+                <source srcset="assets/logo.svg" type="image/svg+xml" />
                 <source type="image/webp" srcset="assets/logo.webp 1x, assets/logo@2x.webp 2x" />
                 <img
                   src="assets/logo.png"
@@ -756,7 +762,7 @@
             <h4>Get in touch</h4>
             <ul>
               <li><a href="mailto:support@asurops.com">support@asurops.com</a></li>
-              <li><a href="https://www.linkedin.com/in/your-profile" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="https://www.linkedin.com/in/asurops/" rel="noopener noreferrer">LinkedIn</a></li>
               <li><a href="#contact">Schedule a consultation</a></li>
             </ul>
           </div>
